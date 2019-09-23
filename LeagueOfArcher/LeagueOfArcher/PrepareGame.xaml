@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Przygotowania"
+             xmlns:local="clr-namespace:LeagueOfArcher"
+             BackgroundColor="{Binding Path=Background, Source={x:Static local:App.mysettings}}"
+             x:Class="LeagueOfArcher.PrepareGame">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+                <Picker x:Name="round_count_picker" Title="Ilość Rund" TitleColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}" HorizontalOptions="StartAndExpand" Margin="20" TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                <Picker x:Name="arrow_count_picker" Title="Strzały" Margin="20" TitleColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                <Picker x:Name="member_count_picker" Title="Ilość graczy" Margin="20" TitleColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}" SelectedIndexChanged="Member_count_picker_SelectedIndexChanged"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+
+                <Picker x:Name="pick_player_1" Title="Gracz1" Margin="10" IsEnabled="True" IsVisible="False" SelectedIndexChanged="Pick_player_1_SelectedIndexChanged"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                <Picker x:Name="pick_player_2" Title="Gracz2" Margin="10" IsEnabled="True" IsVisible="False" SelectedIndexChanged="Pick_player_2_SelectedIndexChanged"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                <Picker x:Name="pick_player_3" Title="Gracz3" Margin="10" IsEnabled="True" IsVisible="False" SelectedIndexChanged="Pick_player_3_SelectedIndexChanged"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                <Picker x:Name="pick_player_4" Title="Gracz4" Margin="10" IsEnabled="True" IsVisible="False" SelectedIndexChanged="Pick_player_4_SelectedIndexChanged"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                <Picker x:Name="pick_player_5" Title="Gracz5" Margin="10" IsEnabled="True" IsVisible="False" SelectedIndexChanged="Pick_player_5_SelectedIndexChanged"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+
+            <Button x:Name="btn_run" Text="Start" VerticalOptions="End" HorizontalOptions="Center" Margin="20" Clicked="Btn_run_Clicked"/>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Gracze"
+             xmlns:local="clr-namespace:LeagueOfArcher"
+             BackgroundColor="{Binding Path=Background, Source={x:Static local:App.mysettings}}"
+             x:Class="LeagueOfArcher.CreatePlayerPage"
+             x:Name="Root">
+
+    <ContentPage.ToolbarItems >
+        <ToolbarItem x:Name="tbi_edit" Text="Edit" Priority="0" Order="Secondary" Clicked="Tbi_edit_Clicked"/>
+        <ToolbarItem x:Name="tbi_delete" Text="Delete" Priority="0" Order="Secondary" Clicked="Tbi_delete_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+                <Label Text="Dodaj nowego gracza" HorizontalOptions="Start" Margin="0,0,0,0" TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                <Entry x:Name="ent_name" WidthRequest="350" VerticalOptions="End" HorizontalOptions="End"/>
+                <Button Text="Dodaj" Clicked="Button_Clicked"/>
+
+                <Label Text="Gracze" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" Margin="20" TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+            <BoxView VerticalOptions="Center" HorizontalOptions="Fill" HeightRequest="1"  Color="#5b5d68"/>
+                <ListView x:Name="players_list" ItemSelected="Players_list_ItemSelected" SelectionMode="Single" BackgroundColor="{Binding Path=Background, Source={x:Static local:App.mysettings}}" SeparatorColor="#5b5d68" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                    <Label x:Name="l_name" Text="{Binding name}" Style="{StaticResource lbl_style1}" TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                                </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

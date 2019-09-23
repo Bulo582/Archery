@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding name}"
+             xmlns:local="clr-namespace:LeagueOfArcher"
+             BackgroundColor="{Binding Path=Background, Source={x:Static local:App.mysettings}}"
+             x:Class="LeagueOfArcher.PlayerDetail">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label x:Name="l_name" Text="Name" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="l_plac" Text="Plac" Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="l_achi" Text="Achi" Grid.Column="2" Grid.Row="1"/>
+                <Label x:Name="l_rank" Text="Rank" Grid.Column="3" Grid.Row="1"/>
+                <Label x:Name="l_aves" Text="Aver" Grid.Column="4" Grid.Row="1"/>
+                <Label x:Name="l_matc" Text="Matc" Grid.Column="5" Grid.Row="1"/>
+                <Label x:Name="l_elos" Text="Elos" Grid.Column="6" Grid.Row="1"/>
+                <Label x:Name="l_wins" Text="Wins" Grid.Column="7" Grid.Row="1"/>
+                <Label x:Name="l_lost" Text="Lost" Grid.Column="8" Grid.Row="1"/>
+            </Grid>
+
+            <ListView x:Name="lst_avi" Header="Achivments" BackgroundColor="DarkGray" Margin="20">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="achivments" HorizontalOptions="Center"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView x:Name="lst_histor" Header="History" BackgroundColor="DarkGray" Margin="20">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="history game" HorizontalOptions="Center"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

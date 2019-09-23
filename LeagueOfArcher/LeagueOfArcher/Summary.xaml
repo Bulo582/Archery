@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Podsumowanie"
+             Padding="30"
+             xmlns:local="clr-namespace:LeagueOfArcher"
+             BackgroundColor="{Binding Path=Background, Source={x:Static local:App.mysettings}}"
+             x:Class="LeagueOfArcher.Summary">
+    
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="Center">
+             <StackLayout>
+                <Grid>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                         
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label x:Name="lbl_poz_1" Text="1." Grid.Row="0" Grid.Column="0" IsVisible="False" IsEnabled="False" FontSize="Large"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                    <Label x:Name="lbl_a_1_1" Text="{Binding Path=p1.Name}" Grid.Row="1" Grid.Column="1" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_1_2" Text="{Binding Path=p1.ScoreRatiorange}" Grid.Row="2" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_1_3" Text="{Binding Path=p1.BestHit}" Grid.Row="3" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_1_4" Text="{Binding Path=p1.Elo}" Grid.Row="4" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+
+                    <Label x:Name="lbl_poz_2" Text="2." Grid.Row="5" Grid.Column="0" IsVisible="False" IsEnabled="False" FontSize="Large"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                    <Label x:Name="lbl_a_2_1" Text="{Binding Path=p2.Name}" Grid.Row="6" Grid.Column="1" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_2_2" Text="{Binding Path=p2.ScoreRatiorange}" Grid.Row="7" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_2_3" Text="{Binding Path=p2.BestHit}" Grid.Row="8" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_2_4" Text="{Binding Path=p2.Elo}" Grid.Row="9" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+
+                    <Label x:Name="lbl_poz_3" Text="3." Grid.Row="10" Grid.Column="0" IsVisible="False" IsEnabled="False" FontSize="Large"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                    <Label x:Name="lbl_a_3_1" Text="{Binding Path=p3.Name}" Grid.Row="11" Grid.Column="1" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_3_2" Text="{Binding Path=p3.ScoreRatiorange}" Grid.Row="12" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_3_3" Text="{Binding Path=p3.BestHit}" Grid.Row="13" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_3_4" Text="{Binding Path=p3.Elo}" Grid.Row="14" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+
+                    <Label x:Name="lbl_poz_4" Text="4." Grid.Row="15" Grid.Column="0" IsVisible="False" IsEnabled="False" FontSize="Large"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                    <Label x:Name="lbl_a_4_1" Text="{Binding Path=p4.Name}" Grid.Row="16" Grid.Column="1" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_4_2" Text="{Binding Path=p4.ScoreRatiorange}" Grid.Row="17" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_4_3" Text="{Binding Path=p4.BestHit}" Grid.Row="18" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_4_4" Text="{Binding Path=p4.Elo}" Grid.Row="19" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+
+                    <Label x:Name="lbl_poz_5" Text="5." Grid.Row="20" Grid.Column="0" IsVisible="False" IsEnabled="False" FontSize="Large"  TextColor="{Binding Path=TextColor, Source={x:Static local:App.mysettings}}"/>
+                    <Label x:Name="lbl_a_5_1" Text="{Binding Path=p5.Name}" Grid.Row="21" Grid.Column="1" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_5_2" Text="{Binding Path=p5.ScoreRatiorange}" Grid.Row="22" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_5_3" Text="{Binding Path=p5.BestHit}" Grid.Row="23" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+                    <Label x:Name="lbl_a_5_4" Text="{Binding Path=p5.Elo}" Grid.Row="24" Grid.Column="2" IsVisible="False" IsEnabled="False" Style="{x:StaticResource lbl_style_summary}"/>
+
+                    
+                    <ListView x:Name="lst_achivment" Grid.Row="25" Grid.ColumnSpan="3">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Label Text="Tu bedzie tabelka" HorizontalOptions="Center"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Button x:Name="btn_newGame" Text="Nowa Gra" Grid.Row="26" HorizontalOptions="Center" Clicked="Btn_newGame_Clicked"/>
+
+                </Grid>
+
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
