@@ -1,2 +1,2 @@
 # Archery
-Mobile application to organize archery tournament.
+Mobile application for organize archery tournament.
